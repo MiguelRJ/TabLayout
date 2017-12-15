@@ -32,7 +32,7 @@ public class CustomFragment extends Fragment{
         View rootView = inflater.inflate(R.layout.fragment_main,container,false);
         txvMessage = rootView.findViewById(R.id.txvMessage);
         String message = getArguments().getString(KEY_MESSAGE);
-        txvMessage.setText(message);
+        txvMessage.setText(message.toString());
         return rootView;
     }
 }

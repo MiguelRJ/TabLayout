@@ -15,14 +15,18 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_weight="1"
-            app:theme="@style/ThemeOverlay.AppCompat.Dark" />
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        <!-- app:popupTheme="@style/ThemeOverlay.AppCompat.Light" estilos para el menu ... -->
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
-
+            android:layout_height="wrap_content"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextColor="@android:color/white"
+            app:tabMode="fixed"
+            app:tabGravity="fill">
         </android.support.design.widget.TabLayout>
 
     </android.support.design.widget.AppBarLayout>
@@ -31,6 +35,7 @@
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1" />
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <!-- app:layout_behavior="@string/appbar_scrolling_view_behavior" para que el viewpager quede por debajo del appbar -->
 
 </android.support.design.widget.CoordinatorLayout>

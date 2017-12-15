@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import java.util.ArrayList;
+
 /**
  * Created by usuario on 13/12/17.
  */
@@ -12,14 +14,16 @@ import android.support.v4.app.FragmentPagerAdapter;
 class ViewPagerAdapter extends FragmentPagerAdapter {
 
     private int pageCount;
+    private ArrayList<String> titulos;
+
+    public ViewPagerAdapter(FragmentManager supportFragmentManager, int pageCount, ArrayList<String> titulos) {
+        super(supportFragmentManager);
+        this.pageCount = pageCount;
+        this.titulos = titulos;
+    }
 
     public ViewPagerAdapter(FragmentManager supportFragmentManager) {
         super(supportFragmentManager);
-    }
-
-    public ViewPagerAdapter(FragmentManager supportFragmentManager, int pageCount) {
-        super(supportFragmentManager);
-        this.pageCount = pageCount;
     }
 
     @Override
@@ -53,6 +57,11 @@ class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return pageCount;
     }
+
+    /*@Override para obtener el titulo de los tab
+    public CharSequence getPageTitle(int position) {
+        return titulos.get(position);
+    }*/
 }

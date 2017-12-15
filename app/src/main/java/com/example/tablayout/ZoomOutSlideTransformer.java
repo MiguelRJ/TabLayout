@@ -1,3 +1,4 @@
+package com.example.tablayout;
 /*
  * Copyright 2014 Toxic Bakery
  *
@@ -15,8 +16,6 @@
  */
 
 import android.view.View;
-
-import com.example.tablayout.BaseTransformer;
 
 public class ZoomOutSlideTransformer extends BaseTransformer {
 
